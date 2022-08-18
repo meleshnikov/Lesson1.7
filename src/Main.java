@@ -53,5 +53,21 @@ public class Main {
         }
         fullName = new String(fullNameChars);
         System.out.println(fullName);
+
+        //Task6
+        System.out.println("\nTask 6");
+        StringBuilder str1 = new StringBuilder("13579");
+        StringBuilder str2 = new StringBuilder("2468");
+        StringBuilder result = new StringBuilder(str1);
+
+        int insertsCount = Math.min(str1.length(), str2.length());
+        for (int i = 0, insertOffset = 1; i < insertsCount; i++, insertOffset += 2) {
+            result.insert(insertOffset, str2.charAt(0));
+            str2.deleteCharAt(0);
+        }
+
+        result.append(str2);
+        System.out.println(result);
+
     }
 }
