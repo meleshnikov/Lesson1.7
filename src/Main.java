@@ -69,5 +69,17 @@ public class Main {
         result.append(str2);
         System.out.println(result);
 
+        //Task7
+        System.out.println("\nTask 7");
+        StringBuilder sourceStr = new StringBuilder("aabccddefgghiijjkk");
+        StringBuilder resultStr = new StringBuilder();
+        resultStr.append(sourceStr.charAt(0));
+        for (int i = 0; i < sourceStr.length() - 1; i++) {
+            if (sourceStr.charAt(i) != sourceStr.charAt(i + 1)) {
+                resultStr.append(sourceStr.charAt(i + 1));
+            }
+        }
+        System.out.println(sourceStr);
+        System.out.println(resultStr);
     }
 }
